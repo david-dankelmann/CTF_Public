@@ -17,12 +17,10 @@ From https://overthewire.org/wargames/krypton/krypton1.html we know, that we mus
 
 Now we see two files. The README tells us, that the flag is encrypted in the other file _krypton2_ using an 'encryption' called _ROT13_ and some more tips.
 
-Let's dump out the 'encryption':
+Let's dump out the 'encryption' that yields or challenge:
 
     cat krypton2
-yields our challenge:
-    
-    YRIRY GJB CNFFJBEQ EBGGRA
+    > YRIRY GJB CNFFJBEQ EBGGRA 
 
 Let's check out what ROT13 is: https://en.wikipedia.org/wiki/ROT13 
 
