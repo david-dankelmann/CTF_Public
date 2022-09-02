@@ -28,7 +28,7 @@ When you have analyzed the occurrence of the letters relatively to the position 
     5: ['N', 'Z', 'J', 'Y', 'K', 'U', 'B', 'N', 'X']}
 
 
-Trying out some combinations didn't help, so something is missing. Maybe there is a better approach? Looking at the given files, you can see that both begin with
+Trying out some combinations didn't help, so something is missing. Maybe there is a better approach? Looking at the content of the intercepted files, you can see that both begin with
     
     YYI
 
