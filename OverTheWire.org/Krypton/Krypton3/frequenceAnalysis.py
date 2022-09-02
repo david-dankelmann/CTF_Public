@@ -5,7 +5,7 @@ CONST_LETTERS_SORTED_BY_OCCURENCE = [
     "E", "A", "R", "I", "O", "T", "N", "S", "L", "C", "U", "D", "P", "M", "H", "G", "B", "F", "Y", "W", "K", "V", "X", "Z", "J", "Q",
 ]
 
-#Few letters have nearly the same probability of occurence. Just swap out these letters here, if you identify the errors
+#Few letters have nearly the same probability of occurence. Just swap out these letters here, if you identify the errors -> Trial + Error
 #index = plaintext key, value = ciphertext key (mapping is done after frequence analysis below)
 guessed_plaintext_mapping = [
     "E", "A", "T", "S", "O", "R", "N", "I", "H", "L", "C", "D", "U", "P", "M", "F", "W", "G", "Y", "B", "K", "V", "X", "Z", "J", "Q",
@@ -54,6 +54,6 @@ for tuple in frequenceAnalysis:
 
 decrypt(ciphertext, guessed_key_dict)
 decrypt(encrypted_challenge, guessed_key_dict)
-pprint.pprint(guessed_key_dict)
+#pprint.pprint(guessed_key_dict)s
 
 

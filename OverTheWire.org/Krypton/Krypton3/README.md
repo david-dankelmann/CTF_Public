@@ -21,7 +21,7 @@ The distribution of letters in languages is not uniform, some [occur more than o
 
 We can reasonably guess the possible plaintext characters associated with their ciphertext partner as we have enough encrypted ciphertexts using the same key. We do so, until the guessed mapping reveals a semantic meaningful key, as some deviation has to be expected (some letters have nearly the same probability, so you can't say for sure, that the order is maintained)
 
-I merged all four ciphertexts and created a script [frequenceAnalysis.py](frequenceAnalysis.py) to count the letters in a given ciphertext. After that, they are sorted by their occurence. From there you can try to map each enciphered letter to the most probable plaintext letter obtaining a possible key dictionary. 
+I merged all four ciphertexts and created a script [frequenceAnalysis.py](frequenceAnalysis.py) to count the letters in a given ciphertext. After that, they are sorted by their occurence. From there you can try to map each enciphered letter to the most probable plaintext letter obtaining a possible key dictionary. Prepare for some trial and error :-)
 
 Trying to decrypt the password yields this:
 
