@@ -28,12 +28,16 @@ When you have analyzed the occurrence of the letters relatively to the position 
     5: ['N', 'Z', 'J', 'Y', 'K', 'U', 'B', 'N', 'X']}
 
 
-Trying out some combinations didn't help, so something is missing. Maybe there is a better approach? Looking at the content of the intercepted files, you can see that both begin with
+Trying out some combinations didn't help, there are too many. Something is missing. Maybe there is a better approach? Looking at the content of the intercepted files, you can see that both begin with
     
     YYI
 
 The most probably word to begin an english text is 'The'. Calculating this by hand, we can guess that the first three key letters are 'FRE'. Essentially we are reducing complexity with this Known-Plaintext!
 
-Now, you only need the letters for position 3, 4 and 5. A bit more of trial and error yields the key _FREKEY_. Decrypting our password with this key yields the solution of this challenge:
+Now, you only need the letters for position 4, 5 and 6. A bit more of trial and error eventually leads to the key _FREKEY_. Decrypting our password with this key yields the solution of this challenge:
 
-    CLEARTEXT
+<details>
+  <summary>Solution</summary>
+  Password: CLEARTEXT
+</details>
+    

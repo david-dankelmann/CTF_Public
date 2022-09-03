@@ -30,10 +30,14 @@ You can code your own solution (e.g. to decrypt all caeser ciphers, not only ROT
 
 
     cat krypton2 | tr "[a-zA-Z]" "[n-za-mN-ZA-M]"
-    > LEVEL TWO PASSWORD ROTTEN
 
 
-
+<details>
+  <summary>Solution</summary>
+  LEVEL TWO PASSWORD ROTTEN
+  
+  Password: ROTTEN
+</details>
 
 
 

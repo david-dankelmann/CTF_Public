@@ -117,5 +117,8 @@ The final key dictionary looks like this:
     'Y': 'P',
     'Z': 'C'}
 
-PW is 
-    BRUTE
+
+<details>
+  <summary>Solution</summary>
+  Password: BRUTE
+</details>
