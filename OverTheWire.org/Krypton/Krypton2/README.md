@@ -62,6 +62,8 @@ Let's do it (following instructions from the README):
 
 M comes 12 positions after the A within the alphabet, so we have confirmation that our rotation key is indeed 12. Now we can decrypt the Challenge _OMQEMDUEQMEK_ using [our decrypting script from the previous level](../Krypton1/decryptCaeserCipher.py) or use the _tr_ command again. 
 
-Password:
+<details>
+  <summary>Solution</summary>
+  Password: CAESARISEASY
+</details>
     
-    CAESARISEASY
