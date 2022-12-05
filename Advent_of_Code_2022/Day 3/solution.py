@@ -1,5 +1,3 @@
-
-
 def findDuplicateItem(rucksack):
     mid = len(rucksack) // 2
     first_half = rucksack[:mid]
@@ -9,17 +7,11 @@ def findDuplicateItem(rucksack):
             return c
     raise Exception("No duplicate found.")
 
-
 def calcPriority(item):
-    
     if(item.isupper()):
         return ord(item) - 65 + 27
     else: #lowercase
         return ord(item) - 96
-        
-
-    
-
 
 if __name__ == "__main__":
     with open('input.txt', 'r') as f:
